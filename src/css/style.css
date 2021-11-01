@@ -1,0 +1,228 @@
+:root {
+	--main-primary: #182026;
+	--main-secondary: #283640;
+	--main-light: #115173;
+}
+
+html {
+	font-family: Tahoma;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-color: var(--main-primary);
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	padding-top: 31px;
+	margin: 0;
+}
+
+#EpubArea ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.content {
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.wrapper {
+	display: flex;
+	height: 100%;
+}
+
+.card {
+	list-style: none;
+	flex: 0 18%;
+	align-self: flex-start;
+	height: 50%;
+	margin: 1% 1% 1% 1%;
+	padding: 0;
+	background-color: var(--main-secondary);
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+
+.cardImg {
+	display: block;
+	margin: auto;
+	padding: 10px;
+	width: 80%;
+}
+
+.cardContext {
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	display: inline-block;
+	width: 100%;
+}
+
+#EpubArea {
+	height: 100%;
+	margin: 0 auto;
+}
+
+#AddButton {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-size: 40px;
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	color: white;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 0 2rem 2rem 0;
+	border-radius: 50%;
+	transition: 0.07s;
+}
+
+#AddButton:hover {
+	background-color: #053f5e81;
+	text-shadow: 0px 0px 30px rgba(206, 206, 206, 0.6);
+	box-shadow: 0px 0px 10px rgba(206, 206, 206, 0.6);
+	cursor: pointer;
+}
+
+#AddButton:active {
+	background-color: #166088;
+}
+
+#AddButton:focus {
+	outline: none;
+}
+
+#Reader {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#TopBar {
+	height: 30px;
+	width: 100%;
+	top: 1px;
+	display: flex;
+	position: fixed;
+	background-color: var(--main-secondary);
+	-webkit-app-region: drag;
+}
+
+#TopBar h3 {
+	margin: auto 5px 5px;
+	color: #577386;
+}
+
+#BarButtons {
+	height: inherit;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	position: absolute;
+	right: 0;
+	-webkit-app-region: no-drag;
+}
+
+#BarButtons li {
+	margin: 0;
+	padding: 5px 15px 5px 15px;
+}
+
+#BarButtons li i {
+	color: white;
+	vertical-align: middle;
+}
+
+#minimize:hover {
+	background-color: var(--main-light);
+}
+
+#maximize:hover {
+	background-color: var(--main-light);
+}
+
+#exit:hover {
+	background-color: #ed4337;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--main-secondary);
+	border: 0px none #ffffff;
+	border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--main-secondary);
+}
+::-webkit-scrollbar-thumb:active {
+	background: var(--main-secondary);
+}
+::-webkit-scrollbar-track {
+	background: var(--main-primary);
+	border: 0px none #ffffff;
+	border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+	background: var(--main-primary);
+}
+::-webkit-scrollbar-track:active {
+	background: var(--main-primary);
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+.hvr-grow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+	-webkit-transform: scale(1.04);
+	transform: scale(1.04);
+}
+
+@media (height: 1080px) {
+	body {
+		padding-top: 0px;
+	}
+
+	#TopBar {
+		display: none;
+	}
+}

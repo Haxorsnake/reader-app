@@ -1,0 +1,14 @@
+.cardImg {
+	display: block;
+	margin: auto;
+	padding: 10px;
+	width: 80%;
+}
+
+.cardContext {
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	display: grid;
+	height: inherit;
+}

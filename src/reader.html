@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+		<link rel="stylesheet" href="css/index.css" />
+
+		<script src="./res/epubjs/dist/epub.js"></script>
+		<script src="https://kit.fontawesome.com/d1599a5078.js" crossorigin="anonymous"></script>
+
+		<script defer src="reader.js"></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<header id="TopBar">
+				<ul id="BarButtons">
+					<li id="window-minimize">
+						<i class="far fa-window-minimize"></i>
+					</li>
+					<li id="window-maximize">
+						<i class="far fa-window-maximize"></i>
+					</li>
+					<li id="window-close">
+						<i class="fas fa-times"></i>
+					</li>
+				</ul>
+			</header>
+			<div class="reader" id="Reader"></div>
+        </div>
+		
+	</body>
+</html>

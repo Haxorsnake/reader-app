@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+		<link defer rel="stylesheet" href="css/index.css" />
+		<script src="https://kit.fontawesome.com/d1599a5078.js" crossorigin="anonymous"></script>
+		<script src="./res/epubjs/dist/epub.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
+		<script defer src="render.js"></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<header id="TopBar">
+				<h3>Reader</h3>
+				<ul id="BarButtons">
+					<li id="window-minimize">
+						<i class="far fa-window-minimize"></i>
+					</li>
+					<li id="window-maximize">
+						<i class="far fa-window-maximize"></i>
+					</li>
+					<li id="window-exit">
+						<i class="fas fa-times"></i>
+					</li>
+				</ul>
+			</header>
+			<div class="wrapper" id="wrapper">
+                <div id="EpubArea">
+                    <ul>
+                    </ul>
+                </div>
+				<button id="AddButton" onclick="addBook()">
+					<i class="fas fa-plus"></i>
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

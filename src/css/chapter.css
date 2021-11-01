@@ -1,0 +1,161 @@
+:root {
+	--main-bg-color: #182026;
+	--main-off-color: #7b9aa6;
+	--scrollbar-color: #283640;
+	--scrollbar-off-color: #436073;
+}
+
+
+aside b br {
+	display: block;
+}
+
+aside b {
+	color: rgba(255 , 255, 255, 0.7);
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	
+}
+
+aside {
+	background-color: rgba(37, 39, 54, 0.5);
+	padding: 10px;
+	box-shadow:  0px 0px 30px 9px rgba(0,0,0,0.62), inset 0 0 10px rgb(255, 212, 95, 0.4);
+
+	border-style: double double solid;
+    border-image-slice: 1;
+    border-width: 2px;
+	border-image-source: linear-gradient(to left, #ff23f4, #af6300);
+
+	margin: 10px;
+}
+
+table tbody tr td p {
+	color: rgba(255 , 255, 255, 0.9) !important;
+	text-shadow: 0px 0px 12px rgba(202, 129, 46, 0.84);
+}
+
+table tbody tr td b br{
+	display: block;
+}
+
+table tbody tr td b{
+	color: rgba(255 , 255, 255, 0.9) !important;
+	
+}
+
+
+table{
+	margin: 10px;
+	background-color: rgba(37, 39, 54, 0.5);
+	padding: 10px;
+	box-shadow:  0px 0px 30px 9px rgba(0,0,0,0.62), inset 0 0 10px rgb(255, 212, 95, 0.4);
+
+	border-style: double double solid;
+    border-image-slice: 1;
+    border-width: 2px;
+	border-image-source: linear-gradient(to left, #ff23f4, #af6300);
+}
+
+tbody tr td {
+	border:none; 
+}
+
+br {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+    background-color: var(--main-bg-color) !important;
+    font-family: "Tahoma";
+    line-height: 1.42857;
+    margin: 5% 5% 0 0!important;
+}
+h1 {
+    font-family: "Tahoma";
+	font-weight: bold;
+	font-size: 45px;
+	text-align: center;
+	color: var(--main-off-color);
+}
+
+h2:hover {
+	background-color: var(--main-bg-color);
+}
+
+hr {
+	display: none;
+}
+
+h2 {
+    font-family: "Tahoma";
+	font-weight: bold;
+	font-size: 30px;
+	color: var(--main-off-color) !important;
+	background-color: var(--main-off-color);
+}
+
+h3 {
+    font-family: "Tahoma";
+	font-weight: bold;
+	font-size: 30px;
+}
+
+a {
+    color: #7dc1ee;
+}
+
+aside p{
+    font-style: italic;
+    filter: brightness(150%);
+    font-size: medium;
+    text-decoration: underline;
+}
+
+h4 {
+    font-family: "Tahoma";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 30px;
+}
+
+h5 {
+    font-family: "Tahoma";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 25px;
+}
+
+h6 {
+    font-family: "Tahoma";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+}
+
+div {
+    text-indent: 3%;
+	overflow-x: hidden;
+}
+
+p {
+    font-family: "Tahoma";
+	color: var(--main-off-color) !important;
+	text-indent: 0;
+	display: block;
+	font-size: 23px;
+	line-height: 1.42857;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}

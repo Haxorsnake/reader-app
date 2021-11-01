@@ -1,0 +1,70 @@
+{
+  "name": "reader-app",
+  "productName": "reader-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Haxorsnake",
+    "email": "optic2010@live.no"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "reader_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@types/jszip": "^3.1.4",
+    "@types/localforage": "0.0.34",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.0.1",
+    "event-emitter": "^0.3.5",
+    "jszip": "^3.1.5",
+    "localforage": "^1.7.2",
+    "lodash": "^4.17.10",
+    "marks-pane": "^1.0.9",
+    "path-webpack": "0.0.3",
+    "stream-browserify": "^2.0.1",
+    "url-polyfill": "^1.1.3",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "electron": "15.3.0"
+  }
+}
