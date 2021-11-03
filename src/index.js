@@ -64,6 +64,8 @@ const createWindow = () => {
 
 	mainWindow.loadFile(path.join(__dirname, "index.html"));
 
+	mainWindow.webContents.openDevTools();
+
 	mainWindow.webContents.on("did-finish-load", () => {
 		mainWindow.webContents.send("window-loaded");
 	});
@@ -92,18 +94,16 @@ ipcMain.on("window-exit", () => {
 	app.quit();
 });
 
-ipcMain.on("open-file-dialog", (e) => {
-	dialog
-		.showOpenDialog({
-			defaultPath: "D:\\Downloads",
-			filters: [{ name: "Books", extensions: ["epub"] }],
-			properties: ["openFile"],
-		})
-		.then((result) => {
-			if (!result.canceled) {
-				e.sender.send("file-selected", result.filePaths[0]);
-			}
-		});
+ipcMain.on("open-file-dialog", async (e) => {
+	const result = await dialog.showOpenDialog({
+		defaultPath: ":\\Downloads",
+		filters: [{ name: "Books", extensions: ["epub"] }],
+		properties: ["openFile"],
+	});
+
+	if (!result.canceled) {
+		e.reply("file-selected", result.filePaths[0]);
+	}
 });
 
 //IPC Open Reader - Create Reading Window

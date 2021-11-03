@@ -25,7 +25,6 @@ const loadBook = async (path) => {
 	var hasChapter = await ipcRenderer.invoke("hasChapter", meta.title);
 	var chapterData = await ipcRenderer.invoke("getChapterValue", meta.title);
 
-	console.log(hasChapter);
 	rendition.themes.register("./css/chapter.css");
 	rendition.attachTo(document.getElementById("Reader"));
 

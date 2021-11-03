@@ -1,7 +1,6 @@
 const { ipcRenderer } = require("electron/renderer");
 
-const bookArea = document.getElementById("EpubArea").firstElementChild;
-const epubStore = ipcRenderer.invoke("getEpubStore");
+const bookArea = document.getElementById("EpubArea");
 
 var titleButtons = [...document.getElementById("BarButtons").children];
 
@@ -12,14 +11,22 @@ titleButtons.map((button) => {
 });
 
 ipcRenderer.on("window-loaded", async () => {
-	let epubs = await epubStore;
-	for (const epub in epubs) {
-		if (Object.hasOwnProperty.call(epubs, epub)) {
-			const element = epubs[epub];
-			bookArea.appendChild(await createCard(element.path));
+	let epubPaths = Object.values(await ipcRenderer.invoke("getEpubStore"));
+	let uList = document.createElement("ul");
+
+	bookArea.appendChild(await addEpubsToList(uList, epubPaths));
+});
+
+const addEpubsToList = async (listElement, epubPaths) => {
+	for (const path in epubPaths) {
+		if (Object.hasOwnProperty.call(epubPaths, path)) {
+			const element = epubPaths[path];
+			listElement.appendChild(await createCard(element.path));
 		}
 	}
-});
+
+	return listElement;
+};
 
 class EpubCard extends HTMLElement {
 	constructor(titleText, coverSrc, path) {
